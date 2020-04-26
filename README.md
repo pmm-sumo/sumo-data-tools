@@ -1,6 +1,5 @@
-# sumo-data-tools
-The repo contains a simple script which converts CSV file into a series of newline-separated
-JSON records when uploading data to [Sumo Logic](https://sumologic.com)
+The repo contains a simple script which might aid in converting CSV file into a series of newline-separated
+JSON records and upload them to [Sumo Logic](https://sumologic.com)
 
 ## Running
 
@@ -46,7 +45,7 @@ For the example above, you can start with `| json "first", "last", "age" | field
 There are several environment properties that control the execution of the script:
 
 * `URL` - the actual URL where the POST is being sent (when empty, no data is being actually sent). The address 
-of the HTTP type source can be found in Manage Data/Collection.
+of the HTTP type source can be found in Manage Data/Collection of your Sumo Logic account.
 * `VERBOSE` - when set to True (or 1), the sent contents is being printed out on the console too
 * `MAX_RECORDS_IN_POST` - number of records to include in a single request
 
