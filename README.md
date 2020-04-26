@@ -38,7 +38,15 @@ Substitute the `MY_URL` with actual collector endpoint address and run it as:
 
 `URL="https://MY_URL" ./upload-csv.py file.csv`
 
-For a reference on how to use the data, check 
+For example:
+
+```
+$ URL="https://collectors.eu.sumologic.com/receiver/v1/http/AbcDefGhiJklMno123AbcDefGhiJklMno123==" ./upload-csv.py test.csv
+Sending a payload of 2 records to https://collectors.eu.sumologic.com/receiver/v1/http/AbcDefGhiJklMno123AbcDefGhiJklMno123==
+<Response [200]>
+```
+
+For a reference on how to use the data afterwards, check 
 [Parse JSON Formatted Logs](https://help.sumologic.com/05Search/Search-Query-Language/01-Parse-Operators/03-Parse-JSON-Formatted-Logs). 
 For the example above, you can start with `| json "first", "last", "age" | fields first, last, age`
 
